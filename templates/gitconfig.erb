@@ -1,0 +1,10 @@
+[user]
+	name = <%= scope.lookupvar('jenkins::jenkinsuser::gitfullname') %>
+	email = <%= scope.lookupvar('jenkins::jenkinsuser::gitemail') %>
+[gitreview]
+	rebase = false
+	username = <%= scope.lookupvar('jenkins::jenkinsuser::gerrituser') %>
+[http "https://git.openhalon.io/"]
+	sslVerify = false
+[http "https://git.hpnos.io/"]
+	sslVerify = false
